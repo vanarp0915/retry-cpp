@@ -22,12 +22,12 @@ int main() {
     retry_param.wait_before_retry = 1;
 
     try {
-        auto result = retry_async(exampleFunction,retry_param, 3, 2);
-        for (int i =0; i <3; i++){
-            std::cout << "attemp 1" <<std::endl;
-            usleep(1000000);
-        }
-        std::cout << "Result: " << result.get() << std::endl;
+        int result = retry(exampleFunction,retry_param, 3, 2);
+        // for (int i =0; i <3; i++){
+        //     std::cout << "attemp 1" <<std::endl;
+        //     usleep(1000000);
+        // }
+        // std::cout << "Result: " << result.get() << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Failed: " << e.what() << std::endl;
     }
