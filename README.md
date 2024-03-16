@@ -1,6 +1,10 @@
 # retry-cpp
-A retry mechanism for the C++ users. Can be heavily used for API calls, functions having multiple failure case parameters.
+A retry mechanism for the C++ users. Can be heavily used for API call functions, functions having multiple failure case parameters etc.
 
+## Features
+* Synchronous and Asynchronous retry mechanism for any type functions.
+* Can specify stop conditions (i.e Stop retry after certain attempts, Stop retry after certain interval of time, Infinte retry untill the function call is success.)
+* Can specify wait conditions (i.e Stop wait after certain time for the next retry, exponential wait for the next retry)
 
 ## Installaton and dependency
 * Give a star to this repo (at the top)
@@ -10,15 +14,10 @@ A retry mechanism for the C++ users. Can be heavily used for API calls, function
 git clone https://github.com/vanarp0915/retry-cpp.git
 ```
 
-## Adding it to your CMakeLists
+## Adding to CMakeLists
 ```
 include_directories(${PROJECT_SOURCE_DIR}/YOUR_FOLDER_PATH/retry-cpp)
 ```
-
-## Features
-* Synchronous and Asynchronous retry mechanism.
-* Specify stop condition (i.e Stop retry after certain attempts, Stop retry after certain interval of time, Infinte retry untill the function call is success.)
-* Specify wait condition (i.e Stop wait after certain time for the next retry, exponential wait)
 
 ## Parameters
 ```
@@ -33,7 +32,7 @@ include_directories(${PROJECT_SOURCE_DIR}/YOUR_FOLDER_PATH/retry-cpp)
 ```
 
 ## Examples
-### Example function to be retryied.
+#### Example function to retry.
 Consider a function which takes two input and retruns the sum. The function also will throw error randomly for testing.
 
 ```
