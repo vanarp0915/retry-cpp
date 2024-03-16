@@ -23,15 +23,15 @@ int exampleFunction(int a, int b) {
 
 
 int main() {
-    // Make the retry asynchronously. 
-    retry_param.stop_after_attempt = true;
-    retry_param.stop_after_attempt = 5;
+    // Setting the retry parameter to expoentially attempt retry after for a factor 2.
+    retry_param.exponential_delay = true ;
+    retry_param.exponential_delay_factor = 1.1;
+    retry_param.stop_after_success = true; 
     retry_param.wait_before_retry = 1;
 
     try {
-        std::cout << "Calling the retry function " <<std::endl;
-        auto result = retry_async(exampleFunction,retry_param, 3, 2);
-        std::cout << "Print after Calling the rerty" <<std::endl;
+        int result = retry(exampleFunction,retry_param, 3, 2);
+
     } catch (const std::exception& e) {
         std::cerr << "Failed: " << e.what() << std::endl;
     }
