@@ -1,6 +1,4 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
 #include <stdexcept>
 #include "retry-cpp.h"
 #include <unistd.h> 

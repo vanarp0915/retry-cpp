@@ -9,6 +9,12 @@ A retry mechanism for the C++ users. Can be heavily used for API calls, function
 ```
 git clone https://github.com/vanarp0915/retry-cpp.git
 ```
+
+## Adding it to your CMakeLists
+```
+include_directories(${PROJECT_SOURCE_DIR}/YOUR_FOLDER_PATH/retry-cpp)
+```
+
 ## Features
 * Synchronous and Asynchronous retry mechanism.
 * Specify stop condition (i.e Stop retry after certain attempts, Stop retry after certain interval of time, Infinte retry untill the function call is success.)
