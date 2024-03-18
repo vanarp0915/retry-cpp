@@ -2,7 +2,7 @@
 A retry mechanism for the C++ users. Can be heavily used for API call functions, functions having multiple failure case parameters etc.
 
 ## Features
-* Synchronous and Asynchronous retry mechanism for any type functions.
+* Synchronous and Asynchronous retry mechanism for any type of functions.
 * Can specify stop conditions (i.e Stop retry after certain attempts, Stop retry after certain interval of time, Infinte retry untill the function call is success.)
 * Can specify wait conditions (i.e Stop wait after certain time for the next retry, exponential wait for the next retry)
 
